@@ -1,13 +1,13 @@
 from django.contrib import admin
 from django.urls import path, include
 
-from . import views
+from .views import *
 
 urlpatterns = [
-    path('hello', views.hello_world),
-    path('', views.home_page),
-    path('task', views.task),
-    path('all-analytics', views.all_analytics),
+    path('hello', hello_world),
+    path('task', task),
 
-    path('<slug:short_url>', views.redirect_url)
+    path('shorten/', shorten_url),
+    path('redirect/<slug:custom_name>', redirect_url),
+    path('all-analytics', all_analytics),
 ]

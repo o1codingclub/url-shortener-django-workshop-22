@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from .models import LongToShort
+from .models import *
 
 # Register your models here.
-admin.site.register(LongToShort)
+admin.site.register(URL_table)
